@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "sharptools-default"
+  },
+  "targets": {
+    "sharptools-default": {
+      "hosting": {
+        "docs": [
+          "sharptools-default-docs"
+        ]
+      }
+    }
+  }
+}

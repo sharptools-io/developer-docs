@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "target": "docs",
+    "public": "content/.vuepress/dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

@@ -1,9 +1,8 @@
 # Getting started with Developer Tools
 A brief introduction about the Developer Tools.
 
-
 ## Access Developer Tools
-Developer Tools can be found in the User Menu drop-down list.   
+Developer Tools can be found in the User Menu drop-down list. See below:
 
 <img src="./assets/access_developer_tools.png" alt="Access Developer Tool" class="zoomable-image" />
 

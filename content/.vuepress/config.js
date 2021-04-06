@@ -49,12 +49,12 @@ module.exports = {
             {
                 title: 'Developer Tools',
                 path: '/developer-tools/',
-                collapsable: true,
+                collapsable: false,
                 children:[
                     {
                         title: 'Custom Tile',
                         path: '/developer-tools/custom-tile/',
-                        collapsable: true,
+                        collapsable: false,
                         children: [
                             {
                                 title: "URL",

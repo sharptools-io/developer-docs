@@ -1,7 +1,7 @@
 # Custom Tiles - HTML Type
 
 ## Overview
-Selecting the HTML type for a Custom Tile provides a script editor interface in which you can write standard HTML, JavaScript,
+Selecting the HTML type for a [Custom Tile](./) provides a script editor interface in which you can write standard HTML, JavaScript,
 and CSS to build Custom Tiles. The HTML option also provides the option to define Tile Settings which you can then
 access within your JavaScript.
 

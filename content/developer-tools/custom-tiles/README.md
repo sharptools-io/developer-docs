@@ -7,18 +7,19 @@ pageClass: zoomable-image
 
 
 ## Overview
-Developers can create custom tiles to embed web page from other sites, or integrate with other services and custom styles
-using the standard web technology and skills they are familiar with - HTML, CSS and JavaScript.
-
-## Creating Custom Tiles
-After tapping the **Create** button at the bottom of the Custom Tiles list, you’ll be taken to the page where you can create your first Custom Tile:
+Custom Tiles can be used to embed web pages from other sites or to integrate with other services using standard web technology like HTML, CSS and JavaScript.
 
 There are two types of Custom Tiles:
 * **[URL](./url.html)**: points to an external webpage; embeds as an iframe
-* **[HTML](./html.html)**: develop the custom tile using HTML, CSS and JavaScript (hosted by SharpTools)
+* **[HTML](./html.html)**: HTML, CSS, and JavaScript (hosted by SharpTools)
+
+
+## Creating Custom Tiles
+From the [Developer Tools](../) page, you can scroll down to the bottom of the Custom Tiles list and tap **Create** which will take you to the Custom Tile editor where you can create your first Custom Tile:
 
 <img src="../assets/creating_custom_tiles.png" alt="Select Custom Tile Type" class="zoomable-image" />
 
+From here, you can select a **Type** of either [URL](./url.md) or [HTML](./html.md) and then follow the relevant guide for that type.
 
 ### Best Practices
 Here are some best practices when working on Custom Tiles:

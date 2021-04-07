@@ -1,6 +1,6 @@
 # Custom Tiles - URL Type 
 
-Selecting the URL type for a Custom Tile is fairly straightforward as it effectively embeds the target website in a tile via an `iframe`.
+Selecting the URL type for a [Custom Tile](./) is fairly straightforward as it effectively embeds the target website in a tile via an `iframe`.
 
 <img src="../assets/creating_windy_url_tile.png" alt="Create URL Custom Tile - Windy" class="zoomable-image" />
 

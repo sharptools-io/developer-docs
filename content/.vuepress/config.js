@@ -65,7 +65,7 @@ module.exports = {
                                 path: '/developer-tools/custom-tile/html',
                             },
                             {
-                                title: "STIO Libary",
+                                title: "JS Library",
                                 path: '/developer-tools/custom-tile/stio-lib',
                             },
                         ]

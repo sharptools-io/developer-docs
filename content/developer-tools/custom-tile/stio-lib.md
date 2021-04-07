@@ -1,4 +1,4 @@
-# STIO Library
+# `stio` Library
 
 ## Installation / How to Use
 The stio library can be referenced from the CDN as a standard `<script>` tag in the HTML of your Custom Tile:

@@ -9,17 +9,20 @@ actionLink: /developer-tools/
 
 customFeatures:
 - title: Developer Tools
-  details: Learn how to develop custom tiles with HTML and JavaScript. Bring the integration with other services into your favorite dashboards the way you liked.
+  details: Learn how to develop custom tiles with HTML and JavaScript. Integrate services into your favorite dashboards the way you like.
   linkUrl: /developer-tools/
   linkText: Read More
+  linkTarget: _self
 - title: Need Help?
-  details: Post questions in the developer community and get help from other fellow developers. Our community developers are very skilled and willing to share their expertises.
+  details: Post questions in the developer community and get help from fellow developers. SharpTools staff can be found in the community too!
   linkUrl: https://community.sharptools.io/c/sharptools-web/developers/
-  linkText: Go to Community
-- title: Looking for Inspirations?
-  details: Check out the existing works shared by the community developers and get inspirations. Don't forget to share and show off your work to the community as well.
+  linkText: Visit Community
+  linkTarget: _blank
+- title: Looking for Inspiration?
+  details: Check out existing work shared by community developers and draw inspiration. Don't forget to share and show off your work too!
   linkUrl: https://community.sharptools.io/c/sharptools-web/developers/
-  linkText: Check out Works
+  linkText: Community Projects
+  linkTarget: _blank
 ---
 
 <div class="features">
@@ -27,7 +30,7 @@ customFeatures:
     <h2>{{ feat.title }}</h2>
     <p>{{ feat.details }}</p>  
     <div class="feature-links">
-      <a v-if="feat.linkUrl" :href='feat.linkUrl'>{{feat.linkText}} →</a>
+      <a v-if="feat.linkUrl" :href='feat.linkUrl' :target="feat.linkTarget">{{feat.linkText}} →</a>
     </div>            
   </div>
 </div>

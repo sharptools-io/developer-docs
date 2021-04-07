@@ -3,7 +3,7 @@ pageClass: zoomable-image
 
 ---
 
-# Custom Tile
+# Custom Tiles
 
 
 ## Overview

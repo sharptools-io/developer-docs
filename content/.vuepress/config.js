@@ -52,7 +52,7 @@ module.exports = {
                 collapsable: false,
                 children:[
                     {
-                        title: 'Custom Tile',
+                        title: 'Custom Tiles',
                         path: '/developer-tools/custom-tiles/',
                         collapsable: false,
                         children: [

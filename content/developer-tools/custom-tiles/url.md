@@ -1,4 +1,4 @@
-# Custom Tile - URL Type 
+# Custom Tiles - URL Type 
 
 Selecting the URL type for a Custom Tile is fairly straightforward as it effectively embeds the target website in a tile via an `iframe`.
 

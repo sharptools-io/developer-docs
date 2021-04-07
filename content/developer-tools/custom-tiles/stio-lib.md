@@ -7,7 +7,7 @@ The stio library can be referenced from the CDN as a standard `<script>` tag in 
 <script src="https://cdn.sharptools.io/js/custom-tiles.js"></script>
 ```
 
-### .ready(callback)
+## .ready(callback)
 Once the stio library is initialized and the communication channel is ready, it will call the callback function
 that you provide.
 
@@ -22,21 +22,21 @@ by the user, the values of the individual settings fields will be empty.
 
 
 
-### .showList(list) `<promise>`
+## .showList(list) `<promise>`
 
 Display a list of options in a modal window in the main SharpTools interface and then get the selected result in the 
 resolved promise.
 
 #### list `<object>`
 
-```js
+```json
 {
     "title": "My Title", //optional, displayed title of the modal
     "items": [], //array of <ListItem> to display
 }
 ```
 #### ListItem `<object>`
-```js
+```json
 {
     "label": "To Display",
     "value": "someKey"
@@ -71,12 +71,12 @@ stio.showList(list).then(function(selectedValue){
 ```
 
 
-### .showForm(form) `<promise>`
+## .showForm(form) `<promise>`
 Display a list of options in a modal window in the main SharpTools interface and then get the selected result in the
 resolved promise.
 
 #### form `<object>`
-```js
+```json
 {
     "title": "My Title", //optional, displayed title of the modal
     "items": [], //array of <FormItem> to display
@@ -84,7 +84,7 @@ resolved promise.
 ```
 
 #### FormItem `<object>`
-```js
+```json
 {
     "name": "displayName", //internal reference
     "label": "Display Name", //User friendly name displayed as the field title
@@ -110,7 +110,7 @@ stio.showForm(form).then(function(data){
 #### Shorthand (pass array of ListItem directly)
 ENUM Type
 The FormItem type of “ENUM” also requires a 'values' field with the list of valid values for the user to select from:
-```js
+```json
 {
     "name": "platform",
     "label": "Which hub?"
@@ -120,27 +120,27 @@ The FormItem type of “ENUM” also requires a 'values' field with the list of 
 ```
 Note that the values field can also be an array of structured objects if you need to display a more user-friendly value
 in the selector. This follows the ListItem format above with a label and value:
-```js
+```json
 {
     "name": "platform",
-    "label": "Which hub?"
+    "label": "Which hub?",
     "type": "ENUM",
     "values": [
-        {label: "SmartThings", value: "smartthings" },
-        {label: "Hubitat Elevation", value: "hubitat" },
+        {"label": "SmartThings", "value": "smartthings" },
+        {"label": "Hubitat Elevation", "value": "hubitat" },
     ]
 }
 ```
 
 
-### .showToast(message, [class])
+## .showToast(message, [class])
 Display a ‘toast’ message in the main SharpTools interface. Optionally, include a class like green or red to customize
 the color of the toast.
 
 #### message `<string>`
 > "Hello world"
 
-### class `<string>`
+#### class `<string>`
 > "green"
 > 
 The default is a black background for the toast message. Use 'green', 'red', or 'blue' to indicate success, error,

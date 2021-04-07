@@ -31,7 +31,7 @@ module.exports = {
     },
     port: 8081, //Dev port. Default:8080 but conflict with pubsub emulator
     markdown: {
-        lineNumbers: true
+        lineNumbers: false
     },
     theme: "@vuepress/theme-default", //Use the official default theme
     themeConfig: {
@@ -53,20 +53,20 @@ module.exports = {
                 children:[
                     {
                         title: 'Custom Tile',
-                        path: '/developer-tools/custom-tile/',
+                        path: '/developer-tools/custom-tiles/',
                         collapsable: false,
                         children: [
                             {
                                 title: "URL",
-                                path: '/developer-tools/custom-tile/url',
+                                path: '/developer-tools/custom-tiles/url',
                             },
                             {
                                 title: "HTML",
-                                path: '/developer-tools/custom-tile/html',
+                                path: '/developer-tools/custom-tiles/html',
                             },
                             {
                                 title: "JS Library",
-                                path: '/developer-tools/custom-tile/stio-lib',
+                                path: '/developer-tools/custom-tiles/stio-lib',
                             },
                         ]
                     },

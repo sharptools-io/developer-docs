@@ -14,13 +14,13 @@ customFeatures:
   linkText: Read More
   linkTarget: _self
 - title: Need Help?
-  details: Post questions in the developer community and get help from fellow developers. SharpTools staff can be found in the community too!
-  linkUrl: https://community.sharptools.io/c/sharptools-web/developers/
+  details: Post questions in the community and get help from fellow developers. SharpTools staff can be found in the community too!
+  linkUrl: https://community.sharptools.io
   linkText: Visit Community
   linkTarget: _blank
 - title: Looking for Inspiration?
   details: Check out existing work shared by community developers and draw inspiration. Don't forget to share and show off your work too!
-  linkUrl: https://community.sharptools.io/c/sharptools-web/developers/
+  linkUrl: https://community.sharptools.io/c/community-projects/14
   linkText: Community Projects
   linkTarget: _blank
 ---

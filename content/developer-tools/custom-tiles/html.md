@@ -42,7 +42,7 @@ You can 'import' a Custom Tile by either manually copying in the HTML code or us
 
 **Import URL Format**
 ```
-/developer/custom-tiles/import/?url={{URL_TO_RAW_SOURCE_HTML}}
+https://sharptools.io/developer/custom-tiles/import/?url={{URL_TO_RAW_SOURCE_HTML}}
 ```
 
 ::: warning
@@ -51,4 +51,8 @@ comfortable with the implementation details. SharpTools does not review and is n
 shared by other developers.
 :::
 
+Looking for some inspiration? Check out the sample tiles we've put together:
 
+::: tip EXAMPLES
+[Community Post: Sample Custom Tiles](https://community.sharptools.io/t/custom-tiles-third-party-integrations/6591/2)
+:::

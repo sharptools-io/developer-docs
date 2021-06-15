@@ -51,6 +51,15 @@ comfortable with the implementation details. SharpTools does not review and is n
 shared by other developers.
 :::
 
+### Update Imported Code
+1. Open your [Custom Tile developer tools](https://sharptools.io/developer/custom-tiles/)
+1. Select the custom tile that you imported previously
+1. Scroll down to the source code editor, tap the :gear: in the top-right corner of the code editor and select '**Update from Source**'  
+   <img src="../assets/custom_tile_update_from_source.png" alt="Update from Source Menu" class="zoomable-image" />
+1. Scroll down and press **Update** at the bottom of the screen to save the changes  
+   <img src="../assets/custom_tile_update_button.png" alt="Update Button" class="zoomable-image" />
+
+
 Looking for some inspiration? Check out the sample tiles we've put together:
 
 ::: tip EXAMPLES

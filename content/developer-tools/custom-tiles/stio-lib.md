@@ -1,11 +1,29 @@
+---
+sidebarDepth: 2
+---
 # `stio` Library
 
 ## Installation / How to Use
 The stio library can be referenced from the CDN as a standard `<script>` tag in the HTML of your Custom Tile:
 
 ```html
-<script src="https://cdn.sharptools.io/js/custom-tiles.js"></script>
+<script src="https://cdn.sharptools.io/js/custom-tiles/0.2.1/stio.js"></script>
 ```
+
+
+If you are updating an older Custom Tile to take advantage of new features, don't forget to update your `stio` library version!  
+
+::: details  
+Starting with release `0.2.x` of the stio library, we’ve implemented semantic versioning. Historically, the stio library was available at a generic URL:
+
+```text
+https://cdn.sharptools.io/js/custom-tiles.js
+```
+
+We will continue to update that generic library URL to point to the latest production version of the library. Since the files are served from a CDN with caching, browsers may hold onto the ‘old’ version of the library for a period of time.
+
+As such, we suggest pointing to the specific versioned instance of the library that is needed for your Custom Tile.
+:::
 
 ## .ready(callback)
 Once the stio library is initialized and the communication channel is ready, it will call the callback function
@@ -13,12 +31,84 @@ that you provide.
 
 ``` js
 stio.ready(function(data){
-console.log('The user specified token is', data.settings.token)
+    console.log('The user specified token is', data.settings.token)
 });
 ```
 Note that the data object which is passed to your callback includes a property called 'settings' which is an object
 that contains the values of the various Tile Settings as they are configured by the user. If the tile is not configured 
 by the user, the values of the individual settings fields will be empty.
+
+
+Enriched settings types such as Things or Variables have additional properties and methods:
+
+### Variables
+The [variable setting type](./html.md#variables) is exposed to your Custom Tile code much text, numeric, or boolean input settings are with the `stio.ready()` callback:
+
+```javascript
+stio.ready(function(data){
+    var myString = data.settings.myString;
+});
+```
+
+Unlike the standard string, numeric, or boolean settings for a tile which expose the raw primitive values, the variable setting is exposed as an enriched object with several properties and methods
+
+**Properties**
+* **`value`**: the current value of the variable
+* **`timestamp`**: the timestamp of the value update of the variable
+* **`id`**: the user specified variable identifier (eg. `$myText` → `myText`)
+
+**Methods**
+* **`setValue(value)`**: update the value of the variable
+  * Make sure to match your input data type with the expected type of the variable
+   ```javascript
+   myBool.setValue(true)
+   myStr.setValue("Ready")
+   myNum.setValue(10)
+   ```
+   &nbsp;
+* **`onValue(callback)`**: the `callback` is called with the updated value anytime the variable value updates
+
+
+
+
+### Things
+The [Thing setting type](./html.md#things) is exposed to your Custom Tile code much like existing text, numeric, or boolean input settings are with the `stio.ready()` callback:
+
+```javascript
+stio.ready(function(data){
+    var myThing = data.settings.myThing;
+});
+```
+
+Unlike the standard string, numeric, or boolean tile settings which expose the raw primitive values, the Thing setting is exposed as an enriched object with several properties and methods
+
+
+**Properties**
+* **`attributes`**: an object containing each of the attributes where the key is the attribute name and the value is an `Attribute` object:
+   * **`value`**: the current value of the attribute
+   * **`timestamp`**: the current timestamp of the attribute value
+   * **`onValue(callback)`**: the `callback` is called with the updated value anytime the attribute value updates
+     * Returns an object with an **`off()`** method if you want to stop listening for updates
+* **`name`**: the device name
+* **`capabilities`**: an array of camelCase capabilities that the device reports that it has implemented (eg. `switch`, `switchLevel`, `colorControl`) 
+
+**Methods**
+* **`sendCommand(command, [argsArray])`**: send the specified command to the device with an optional array of arguments
+   ```javascript
+   myThing.sendCommand("on")
+   myThing.sendCommand("setLevel", [50])
+   ```
+   &nbsp;
+* **`subscribe(attribute)`**: send the request to the supporting smart-home hub to forward events from that device to SharpTools (and our Custom Tile)
+  * Note that you can also pass an array of attribute names if you want to subscribe to multiple attributes from the same thing: 
+  ```javascript
+  myThing.subscribe('switch')
+  myThing.subscribe(['switch', 'switchLevel'])
+  ```
+
+
+
+
 
 
 

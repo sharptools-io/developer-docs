@@ -16,5 +16,11 @@
     "@vuepress/plugin-medium-zoom": "^1.8.2",
     "@vuepress/plugin-pwa": "^1.8.2",
     "vuepress": "^1.8.2"
+  },
+  "//openssl-new-nodejs": "fix OpenSSL with newer Node Versions: https://github.com/vuejs/vuepress/issues/3136#issuecomment-2092014071",
+  "overrides": {
+    "webpack@4.47.0": {
+      "terser-webpack-plugin": "^4.2.3"
+    }
   }
 }

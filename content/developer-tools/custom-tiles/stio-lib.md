@@ -66,9 +66,15 @@ Unlike the standard string, numeric, or boolean settings for a tile which expose
    myNum.setValue(10)
    ```
    &nbsp;
-* **`onValue(callback)`**: the `callback` is called with the updated value anytime the variable value updates
+* **`onValue(callback)`**: the `callback` is called with the updated value anytime the variable value updates. Returns an object with an `off()` method if you want to stop listening for updates.
+   ```javascript
+   myVar.onValue(function(value){
+      console.log('The new value is', value)
+   })
+   ```
 
 
+[Example Variable Custom Tile - Code Gist](https://gist.github.com/joshualyon/7a659611d3a63b5e2b74b717df29495e)
 
 
 ### Things
@@ -87,10 +93,14 @@ Unlike the standard string, numeric, or boolean tile settings which expose the r
 * **`attributes`**: an object containing each of the attributes where the key is the attribute name and the value is an `Attribute` object:
    * **`value`**: the current value of the attribute
    * **`timestamp`**: the current timestamp of the attribute value
-   * **`onValue(callback)`**: the `callback` is called with the updated value anytime the attribute value updates
-     * Returns an object with an **`off()`** method if you want to stop listening for updates
+   * **`onValue(callback)`**: the `callback` is called with the updated value anytime the attribute value updates. Returns an object with an **`off()`** method if you want to stop listening for updates.
+      ```javascript
+      myThing.attributes['switch'].onValue(function(value){
+          console.log('The new switch value is', value)
+      })
+      ```
 * **`name`**: the device name
-* **`capabilities`**: an array of camelCase capabilities that the device reports that it has implemented (eg. `switch`, `switchLevel`, `colorControl`) 
+* **`capabilities`**: a string array of camelCase capabilities that the device reports that it has implemented (eg. `switch`, `switchLevel`, `colorControl`) 
 
 **Methods**
 * **`sendCommand(command, [argsArray])`**: send the specified command to the device with an optional array of arguments
@@ -106,7 +116,7 @@ Unlike the standard string, numeric, or boolean tile settings which expose the r
   myThing.subscribe(['switch', 'switchLevel'])
   ```
 
-
+[Example Thing Custom Tile - Code Gist](https://gist.github.com/joshualyon/c8cfab61675aac3c94dc4708ee4eb050)
 
 
 

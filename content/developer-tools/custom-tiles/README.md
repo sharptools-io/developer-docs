@@ -28,10 +28,8 @@ Here are some best practices when working on Custom Tiles:
 For example, display a message suggesting the tile should be configured.
 You can test this by either not filling out the preview settings or clearing out the settings before tapping continue in the Settings preview modal.
 
-**Prefer classic JavaScript syntax over modern ES6 syntax**  
-This provides a wider range of compatibility with browser – especially considering that older Fire Tablets and iPads are commonly used as dashboard viewing devices.  
-
-Example: instead of arrow syntax `()=>{ }` prefer traditional function declarations `function(){ }`
+**Consider browser compatibility for shared tiles**  
+If you're building a tile for personal use and know your devices support modern JavaScript, feel free to use whatever syntax you prefer. If you plan to share your tile with others, keep in mind that SharpTools supports devices as old as iOS 10.3 — so targeting ES2015 (ES6) syntax ensures the widest compatibility. Newer syntax like optional chaining (`?.`) or nullish coalescing (`??`) may not work on older tablets or iPads.
 
 **Write body content only, not a full HTML document**  
 Your Custom Tile code is rendered inside a sandboxed iframe that already has a page structure in place. Write the content that would go inside a `<body>` tag — HTML elements, `<style>`, and `<script>` tags. Do not include `<!DOCTYPE>`, `<html>`, `<head>`, or `<body>` tags as these are already provided.

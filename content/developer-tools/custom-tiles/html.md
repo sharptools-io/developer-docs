@@ -17,6 +17,12 @@ Vue, Angular, Tailwind, etc. Or you can use regular (vanilla) HTML and JS.
   Your browser does not support the video tag.
 </video> 
 
+::: tip Write Body Content Only
+Your code should contain the **body content** of the page — HTML elements, `<script>` tags, and `<style>` tags. Do not include document-level tags like `<!DOCTYPE>`, `<html>`, `<head>`, or `<body>` as these are already provided by the tile rendering framework.
+
+Your code is injected into a pre-loaded iframe page on a sandboxed domain, which is why tiles render quickly while remaining securely isolated.
+:::
+
 ## Settings
 You can define settings for the Custom Tile which get exposed as additional options within the main
 dashboard interface when you edit a tile. To use these within your scripts, you’ll want to use our [stio library](./stio-lib.md) as shown in the snippet below.

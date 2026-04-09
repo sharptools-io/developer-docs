@@ -33,6 +33,9 @@ This provides a wider range of compatibility with browser – especially conside
 
 Example: instead of arrow syntax `()=>{ }` prefer traditional function declarations `function(){ }`
 
+**Write body content only, not a full HTML document**  
+Your Custom Tile code is rendered inside a sandboxed iframe that already has a page structure in place. Write the content that would go inside a `<body>` tag — HTML elements, `<style>`, and `<script>` tags. Do not include `<!DOCTYPE>`, `<html>`, `<head>`, or `<body>` tags as these are already provided.
+
 **If using the ‘Default Dimensions’ option, take preference to the smallest reasonable size**  
 When adding tiles to a dashboard, it’s generally preferred not to have a tile larger than the dashboard width added. For example, many mobile (portrait) dashboard users will only be showing 2 columns wide, so a 3 wide tile would extend beyond their dashboard.
 

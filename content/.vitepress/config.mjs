@@ -23,6 +23,7 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
+    externalLinkIcon: true,
     outline: [2, 3],
     nav: [
       { text: 'Home', link: '/' },

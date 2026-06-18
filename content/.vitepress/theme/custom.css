@@ -5,6 +5,13 @@
   --vp-home-hero-name-color: #3f51b5;
 }
 
+.dark {
+  --vp-c-brand-1: #a8b1ff;
+  --vp-c-brand-2: #c0c7ff;
+  --vp-c-brand-3: #5c73e7;
+  --vp-home-hero-name-color: #a8b1ff;
+}
+
 .vp-doc img.zoomable-image {
   border-radius: 6px;
 }

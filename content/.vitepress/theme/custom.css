@@ -1,0 +1,14 @@
+:root {
+  --vp-c-brand-1: #3f51b5;
+  --vp-c-brand-2: #4f63c6;
+  --vp-c-brand-3: #6f7ed6;
+  --vp-home-hero-name-color: #3f51b5;
+}
+
+.vp-doc img.zoomable-image {
+  border-radius: 6px;
+}
+
+.vp-doc video {
+  max-width: 100%;
+}

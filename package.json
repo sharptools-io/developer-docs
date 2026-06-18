@@ -1,26 +1,19 @@
 {
   "name": "docs",
   "version": "1.0.0",
+  "private": true,
   "description": "SharpTools Dev Docs",
-  "main": "index.js",
   "scripts": {
-    "docs:dev": "vuepress dev content",
-    "docs:build": "vuepress build content"
+    "docs:dev": "vitepress dev content",
+    "docs:build": "vitepress build content",
+    "docs:preview": "vitepress preview content"
   },
-  "author": "James Liu (james@sharptools.io)",
+  "author": "Josh Lyon (josh@sharptools.io)",
   "repository": {
     "type": "git",
     "url": "https://github.com/sharptools-io/developer-docs.git"
   },
   "devDependencies": {
-    "@vuepress/plugin-medium-zoom": "^1.8.2",
-    "@vuepress/plugin-pwa": "^1.8.2",
-    "vuepress": "^1.8.2"
-  },
-  "//openssl-new-nodejs": "fix OpenSSL with newer Node Versions: https://github.com/vuejs/vuepress/issues/3136#issuecomment-2092014071",
-  "overrides": {
-    "webpack@4.47.0": {
-      "terser-webpack-plugin": "^4.2.3"
-    }
+    "vitepress": "^1.6.4"
   }
 }

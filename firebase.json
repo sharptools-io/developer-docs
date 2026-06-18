@@ -1,7 +1,8 @@
 {
   "hosting": {
     "target": "docs",
-    "public": "content/.vuepress/dist",
+    "public": "content/.vitepress/dist",
+    "cleanUrls": true,
     "ignore": [
       "firebase.json",
       "**/.*",

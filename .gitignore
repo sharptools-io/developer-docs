@@ -88,8 +88,10 @@ dist
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
 
-# vuepress build output
+# vuepress / vitepress build output
 .vuepress/dist
+.vitepress/cache
+.vitepress/dist
 
 # Serverless directories
 .serverless/

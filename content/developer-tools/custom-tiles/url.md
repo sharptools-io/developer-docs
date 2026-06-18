@@ -17,6 +17,6 @@ in the whole tag and the developer tools will automatically grab it for you.
 
 
 ::: tip Info
-The [stio library](./stio-lib.html) works with URL tiles too, but we don’t expose the ability to configure
+The [stio library](./stio-lib) works with URL tiles too, but we don’t expose the ability to configure
 settings for the URL option (yet!)
 :::

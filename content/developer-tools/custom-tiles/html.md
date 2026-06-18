@@ -1,5 +1,5 @@
 ---
-sidebarDepth: 2
+outline: [2, 3]
 ---
 
 # Custom Tiles - HTML Type
@@ -25,7 +25,7 @@ Your code is injected into a pre-loaded iframe page on a sandboxed domain, which
 
 ## Settings
 You can define settings for the Custom Tile which get exposed as additional options within the main
-dashboard interface when you edit a tile. To use these within your scripts, you’ll want to use our [stio library](./stio-lib.md) as shown in the snippet below.
+dashboard interface when you edit a tile. To use these within your scripts, you’ll want to use our [stio library](./stio-lib) as shown in the snippet below.
 
 ```html
 <script src="https://cdn.sharptools.io/js/custom-tiles.js"></script>
@@ -38,7 +38,7 @@ dashboard interface when you edit a tile. To use these within your scripts, you�
 
 ::: tip  
 There are a variety of functions such as `showToast()`, `showList()` and `showForm()` which are included in the stio library. 
-Check out the [stio library](./stio-lib.md) documentation for more details.  
+Check out the [stio library](./stio-lib) documentation for more details.  
 :::
 
 There are both primitive setting types like String, Numeric, and Boolean as well as enriched setting types like Things and Variables. Primitive setting types have the value directly exposed on the setting key. Enriched setting types enable you to interact with resources like Things and Variables from the SharpTools platform to read values, listen for updates, and send commands.
@@ -53,7 +53,7 @@ There are both primitive setting types like String, Numeric, and Boolean as well
 ### Things
 You can define a SharpTools Thing as a setting within your Custom Tile. If you define which capabilities the device must have, the list of things presented to the user when configuring the tile setting will be filtered to devices which match that capability set. This is helpful for ensuring that the device selected by the user will have the attributes and commands you expect for use in your custom code. 
 
-You can interact with the Thing using the [stio library](./stio-lib.md#things) to access attribute values, subscribe to attribute updates, and send device commands.
+You can interact with the Thing using the [stio library](./stio-lib#things) to access attribute values, subscribe to attribute updates, and send device commands.
 
 <img src="../assets/settings/thing-setting-preview.jpeg" alt="Thing Setting Preview" class="zoomable-image" />
 
@@ -80,7 +80,7 @@ If you want to use a Custom Capability or a capability that otherwise doesn't ex
 ### Variables
 You can define a SharpTools Variable as a setting within your Custom Tile. You must select the specific type of variable to restrict the variable selection to.
 
-You can interact with the Variable using the [stio library](./stio-lib.md#variables) to access the variable value, subscribe to variable updates, and set/update the attribute value.
+You can interact with the Variable using the [stio library](./stio-lib#variables) to access the variable value, subscribe to variable updates, and set/update the attribute value.
 
 <img src="../assets/settings/variable-setting-preview.jpeg" alt="Thing Setting Preview" class="zoomable-image" />
 

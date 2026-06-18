@@ -2,29 +2,32 @@
 layout: home
 hero:
   name: SharpTools
-  text: Developer Documentation Center
-  tagline: Build custom tiles and integrations for your dashboards.
+  text: Technical Documentation
+  tagline: Guides for SharpTools Bridge, Developer Tools, and advanced integrations.
   image:
     src: /icons/android-chrome-150x150.png
     alt: SharpTools
   actions:
     - theme: brand
-      text: Get Started
+      text: Developer Tools
       link: /developer-tools/
+    - theme: alt
+      text: Bridge Alpha
+      link: /bridge/
     - theme: alt
       text: Community
       link: https://community.sharptools.io
 features:
   - title: Developer Tools
-    details: Learn how to develop custom tiles with HTML and JavaScript. Integrate services into your favorite dashboards the way you like.
+    details: Build custom dashboard tiles with HTML, JavaScript, and SharpTools APIs.
     link: /developer-tools/
     linkText: Read More
+  - title: Bridge Alpha
+    details: Run SharpTools Bridge locally and connect supported local devices and services.
+    link: /bridge/
+    linkText: Read More
   - title: Need Help?
-    details: Post questions in the community and get help from fellow developers. SharpTools staff can be found in the community too.
+    details: Ask questions, share feedback, and follow alpha discussions in the SharpTools Community.
     link: https://community.sharptools.io
     linkText: Visit Community
-  - title: Looking for Inspiration?
-    details: Check out existing work shared by community developers and draw inspiration. Don't forget to share and show off your work too.
-    link: https://community.sharptools.io/c/community-projects/14
-    linkText: Community Projects
 ---

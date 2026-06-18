@@ -27,7 +27,8 @@ export default defineConfig({
     outline: [2, 3],
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Get Started', link: '/developer-tools/' },
+      { text: 'Developer Tools', link: '/developer-tools/' },
+      { text: 'Bridge', link: '/bridge/' },
       { text: 'Open App', link: 'https://sharptools.io' }
     ],
     sidebar: {
@@ -45,6 +46,20 @@ export default defineConfig({
                 { text: 'JS Library', link: '/developer-tools/custom-tiles/stio-lib' }
               ]
             }
+          ]
+        }
+      ],
+      '/bridge/': [
+        {
+          text: 'Bridge Alpha',
+          link: '/bridge/',
+          items: [
+            { text: 'Getting Started', link: '/bridge/getting-started' },
+            { text: 'Install with Docker', link: '/bridge/install-docker' },
+            { text: 'Connect to SharpTools', link: '/bridge/connect-sharptools' },
+            { text: 'Supported Integrations', link: '/bridge/integrations' },
+            { text: 'Troubleshooting', link: '/bridge/troubleshooting' },
+            { text: 'Security and Alpha Notes', link: '/bridge/security-alpha-notes' }
           ]
         }
       ]

@@ -1,3 +1,7 @@
+<script setup>
+import BridgeReleaseDownloads from '../.vitepress/theme/components/BridgeReleaseDownloads.vue'
+</script>
+
 # Getting Started with Bridge
 
 This guide walks through the basic Bridge Alpha flow.
@@ -50,12 +54,32 @@ volumes:
   sharptools-bridge-data:
 ```
 
-```text [macOS Installer]
-1. Download the latest Bridge Alpha macOS installer package.
-2. Open the package and follow the installer prompts.
-3. Use the SharpTools Bridge menu bar app to open the local Bridge UI.
-4. Keep the Mac awake and available on your local network.
-```
+<div class="vp-block" data-title="macOS Installer">
+
+<ol>
+  <li>
+    <strong>Download and install Bridge.</strong>
+    <BridgeReleaseDownloads />
+  </li>
+  <li>Use the SharpTools Bridge menu bar app to open the local Bridge UI.</li>
+  <li>Keep the Mac awake and available on your local network.</li>
+</ol>
+
+</div>
+
+<div class="vp-block" data-title="Linux Binary">
+
+<ol>
+  <li>
+    <strong>Download and unpack the Linux binary.</strong>
+    <BridgeReleaseDownloads target="linux" />
+  </li>
+  <li>Extract the archive on the Linux host where Bridge will stay running.</li>
+  <li>Run <code>SHARPTOOLS_BRIDGE_HOME=/var/lib/sharptools-bridge ./sharptools-bridge</code> from the extracted folder for a quick terminal test, or run it from your preferred service manager.</li>
+  <li>Open <code>http://&lt;linux-host&gt;:8787/</code> from a browser on your local network.</li>
+</ol>
+
+</div>
 
 :::
 

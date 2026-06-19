@@ -57,7 +57,22 @@ export default defineConfig({
             { text: 'Getting Started', link: '/bridge/getting-started' },
             { text: 'Install with Docker', link: '/bridge/install-docker' },
             { text: 'Connect to SharpTools', link: '/bridge/connect-sharptools' },
-            { text: 'Supported Integrations', link: '/bridge/integrations' },
+            {
+              text: 'Supported Integrations',
+              link: '/bridge/integrations',
+              collapsed: true,
+              items: [
+                { text: 'Matter', link: '/bridge/integrations/matter' },
+                { text: 'Philips Hue', link: '/bridge/integrations/philips-hue' },
+                { text: 'Shelly', link: '/bridge/integrations/shelly' },
+                { text: 'Kasa / Tapo', link: '/bridge/integrations/kasa-tapo' },
+                { text: 'Lutron', link: '/bridge/integrations/lutron' },
+                { text: 'Fully Kiosk Browser', link: '/bridge/integrations/fully-kiosk' },
+                { text: 'HTTP Webhook Device', link: '/bridge/integrations/http-webhook' },
+                { text: 'iCal Calendar Events', link: '/bridge/integrations/ical-calendar-events' },
+                { text: 'Groovy Labs', link: '/bridge/integrations/groovy-labs' }
+              ]
+            },
             { text: 'Troubleshooting', link: '/bridge/troubleshooting' },
             { text: 'Security and Alpha Notes', link: '/bridge/security-alpha-notes' }
           ]

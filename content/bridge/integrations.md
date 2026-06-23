@@ -20,7 +20,7 @@ Bridge focuses on LAN, Wi-Fi, HTTP, calendar, and runtime-based integrations. It
 | [Philips Hue](/bridge/integrations/philips-hue) | Tested | Connects compatible Hue lights, groups, scenes, and buttons locally with near real-time status updates. |
 | [Shelly](/bridge/integrations/shelly) | Early | Supports Shelly Gen 2 and Gen 3 switches, relays, lights, plugs, and meters. Gen 1 is not in scope. |
 | [Kasa / Tapo](/bridge/integrations/kasa-tapo) | Early | Connects local TP-Link Kasa and Tapo plugs, switches, outlets, dimmers, bulbs, and energy-monitoring devices. |
-| [Lutron](/bridge/integrations/lutron) | Early | Connects supported Lutron systems for local switches, dimmers, and remotes. Setup currently requires existing certificate material. |
+| [Lutron](/bridge/integrations/lutron) | Early | Connects supported Lutron systems for local switches, dimmers, and Pico/remotes using local bridge-button pairing. |
 | [Fully Kiosk Browser](/bridge/integrations/fully-kiosk) | Early | Controls Fully Kiosk Browser tablets for dashboards, screen control, page loading, speech, and device health. |
 | [HTTP Webhook Device](/bridge/integrations/http-webhook) | Early | Creates simple local webhook-backed devices for switches, motion, temperature, buttons, and one-shot actions. |
 | [iCal Calendar Events](/bridge/integrations/ical-calendar-events) | Early | Turns matched calendar events into resources that can be used in dashboards and rules. |

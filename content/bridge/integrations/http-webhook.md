@@ -47,7 +47,7 @@ Supported features include:
 | **Switch** | `on()` and `off()` commands with stored on/off state. | `/switch`, `/switch/on`, `/switch/off` | `on()`, `off()` |
 | **Temperature** | Temperature Measurement attribute. | `/temperature` | None |
 | **Motion** | Motion Sensor attribute. | `/motion`, `/motion/active`, `/motion/inactive` | None |
-| **Button** | Button event updates. | `/button` | None |
+| **Button** | Button state and event updates with optional button number data. | `/button` | None |
 | **Momentary** | `push()` command for one-shot actions. | None | `push()` |
 
 The setup flow creates simple outbound `POST` requests for switch on/off and momentary push URLs when those URLs are provided.
@@ -209,12 +209,12 @@ Use `value` for new integrations. Bridge also accepts `motion`, `state`, or `sta
 
 ### Button
 
-Call the button path to emit a button event.
+Call the button path to update the button state and emit a button event.
 
 ::: code-group
 
 ```http [Query]
-POST /button?event=pushed&buttonNumber=1
+POST /button?button=pushed&buttonNumber=1
 ```
 
 ```http [JSON]
@@ -222,8 +222,8 @@ POST /button
 content-type: application/json
 
 {
-  "event": "double",
-  "buttonNumber": 1
+  "button": "held",
+  "buttonNumber": 2
 }
 ```
 
@@ -231,7 +231,7 @@ content-type: application/json
 POST /button
 content-type: application/x-www-form-urlencoded
 
-event=double&buttonNumber=1
+button=double&buttonNumber=1
 ```
 
 ```http [Plain Text]
@@ -243,18 +243,20 @@ pushed
 
 :::
 
-Use query parameters, JSON, or form-encoded data when you need to include `buttonNumber`. Plain text bodies are useful for the button event value only.
+Use query parameters, JSON, or form-encoded data when you need to include `buttonNumber`. Plain text bodies are useful for the button value only.
 
-Supported button event values:
+Button numbers default to `1`. If a webhook reports a higher `buttonNumber`, Bridge updates the device's `numberOfButtons` state so the device can represent multi-button controllers.
 
-| Resulting event | Accepted values |
+Supported button values:
+
+| Resulting button value | Accepted values |
 | --- | --- |
-| `short_release` | `pushed`, `push`, `tap`, `pressed`, `press`, or no event value |
-| `double_short_release` | `double`, `double_tap`, `doubletap` |
-| `long_release` | `held`, `hold`, `long_hold`, `longhold` |
+| `pushed` | `pushed`, `push`, `tap`, `tapped`, `pressed`, `press`, `short_release`, `shortrelease`, `release`, `released`, or no button value |
+| `held` | `held`, `hold`, `long_hold`, `longhold`, `long_press`, `longpress`, `long_release`, `longrelease` |
+| `double` | `double`, `double_tap`, `doubletap`, `double_tapped`, `doubletapped`, `double_short_release`, `doubleshortrelease` |
 
 ::: details Alternative event keys
-Use `event` for new integrations. Bridge also accepts `button`, `lastEvent`, `value`, or `state`. Other string event values are passed through as-is.
+Use `button` for new integrations. Bridge also accepts `event`, `lastEvent`, `value`, or `state` for compatibility with existing webhook senders. Unrecognized values default to `pushed`.
 :::
 
 ## Outbound Webhooks

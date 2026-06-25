@@ -32,7 +32,7 @@ Pick the install path that best matches the machine where Bridge will stay runni
 
 ::: code-group
 
-<div class="vp-block" data-title="Windows Installer">
+<div class="vp-block active" data-title="Windows Installer">
 
 <ol>
   <li>

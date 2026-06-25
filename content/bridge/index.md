@@ -17,7 +17,7 @@ The current alpha is organized around a few core areas:
 
 - **Admin UI:** manage local devices, integrations, cloud connection, logs, and system configuration from the Bridge UI.
 - **Cloud Sync:** pair SharpTools Bridge with SharpTools Cloud and choose which local resources should be synced to the cloud
-- **Flexible Installation Options:** Docker for home servers, NAS devices, and Windows. Or native macOS installer and Linux standalone binary.
+- **Flexible Installation Options:** Docker for home servers and NAS devices, native Windows and macOS installers, and a Linux standalone binary.
 - **Local Integrations:** connect supported local devices and services, including Matter.js, Philips Hue, early native drivers, local webhook utilities, Calendar event matching, and experimental Groovy compatibility.
 
 ::: tip Supported Integrations
@@ -26,7 +26,7 @@ Review the [Supported Integrations](./integrations) page for the full driver lis
 
 ## Who is the Alpha for?
 
-The SharpTools Bridge Alpha is best suited for those who are comfortable with local networking, Docker or early software installs, and sharing useful troubleshooting details when something does not work.
+The SharpTools Bridge Alpha is best suited for people who are willing to share feedback when things work well and when they do not, do a bit of troubleshooting, and tolerate rough edges while the experience is still being refined.
 
 It is especially helpful if you have one or more of these available to test:
 

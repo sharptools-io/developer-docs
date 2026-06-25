@@ -11,25 +11,52 @@ This guide walks through the basic Bridge Alpha flow.
 You will need:
 
 - A SharpTools account with Bridge Alpha access.
-- A device that can run Bridge locally, such as a Linux host, NAS, home server, always-on desktop Mac, or another machine that stays awake.
+- A device that can run Bridge locally, such as a Linux host, NAS, home server, always-on desktop Mac or Windows PC, or another machine that stays awake.
 - Access to the local network where your devices live.
 - A supported device or integration to test.
 
 Bridge should run on a machine that is normally available. Desktops, NAS, or dedicated always-on mini computers are excellent choices.
 
 ::: tip Local Network Required
-Many Bridge integrations depend on local network access, discovery, or direct device communication. Linux Docker installs with host networking usually have the best LAN discovery behavior. Docker Desktop and macOS installs can still work well, but some integrations may require manual host/IP entry depending on your network.
+Many Bridge integrations depend on local network access, discovery, or direct device communication. For desktop users, the Windows and macOS installers are usually the best fit. For dedicated Linux hosts and NAS devices, Docker with host networking usually has the best LAN discovery behavior.
 :::
 
 ## Choose an Install Path
 
 Pick the install path that best matches the machine where Bridge will stay running.
 
-- **Docker:** good for Linux servers, NAS devices, Windows Docker Desktop, and power-user environments.
+- **Windows installer:** good for always-on desktop-style Windows PCs. The installer runs Bridge as a background service and includes a system tray app.
 - **macOS installer:** good for always-on desktop-style Macs. The installer runs Bridge as a background service and includes a menu bar app.
+- **Docker:** good for Linux servers, NAS devices, and power-user environments where host networking is available.
 - **Standalone binary:** useful for Linux testers and advanced/manual setups.
 
 ::: code-group
+
+<div class="vp-block" data-title="Windows Installer">
+
+<ol>
+  <li>
+    <strong>Download and install Bridge.</strong>
+    <BridgeReleaseDownloads target="windows" />
+  </li>
+  <li>Use the SharpTools Bridge system tray app to open the local Bridge UI.</li>
+  <li>Keep the Windows PC awake and available on your local network.</li>
+</ol>
+
+</div>
+
+<div class="vp-block" data-title="macOS Installer">
+
+<ol>
+  <li>
+    <strong>Download and install Bridge.</strong>
+    <BridgeReleaseDownloads />
+  </li>
+  <li>Use the SharpTools Bridge menu bar app to open the local Bridge UI.</li>
+  <li>Keep the Mac awake and available on your local network.</li>
+</ol>
+
+</div>
 
 ```bash [Docker Run]
 docker run -d \
@@ -54,19 +81,6 @@ volumes:
   sharptools-bridge-data:
 ```
 
-<div class="vp-block" data-title="macOS Installer">
-
-<ol>
-  <li>
-    <strong>Download and install Bridge.</strong>
-    <BridgeReleaseDownloads />
-  </li>
-  <li>Use the SharpTools Bridge menu bar app to open the local Bridge UI.</li>
-  <li>Keep the Mac awake and available on your local network.</li>
-</ol>
-
-</div>
-
 <div class="vp-block" data-title="Linux Binary">
 
 <ol>
@@ -83,9 +97,9 @@ volumes:
 
 :::
 
-The Docker examples above rely on the defaults built into the Bridge image: `/data` for persistent storage, `8787` for the local admin UI, and `0.0.0.0` for local-network access.
+The Docker examples above are best suited to Linux hosts, NAS devices, and server-style environments that support host networking. They rely on the defaults built into the Bridge image: `/data` for persistent storage, `8787` for the local admin UI, and `0.0.0.0` for local-network access.
 
-For more Docker details, including Docker Desktop port mapping, environment overrides, and persistent storage notes, see [Install with Docker](./install-docker). The examples above use host networking, which is best suited to Linux hosts and many NAS/server environments. If you are using Docker Desktop on Windows or macOS, review the Docker Desktop notes before choosing that path.
+For most Windows and macOS desktop users, use the native installer instead of Docker Desktop. Docker Desktop port mapping is usually enough for the Bridge UI and outbound cloud connection, but it can interfere with mDNS, UDP broadcast, Matter commissioning, and other local discovery behavior. If you still want to use Docker Desktop, review the warnings in [Install with Docker](./install-docker) before choosing that path.
 
 ## Basic Flow
 

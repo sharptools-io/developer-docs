@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 
-type BridgeDownloadTarget = 'macos' | 'linux'
+type BridgeDownloadTarget = 'macos' | 'linux' | 'windows'
 type BridgeArch = 'arm64' | 'amd64'
 
 type BridgeDownload = {
@@ -66,6 +66,14 @@ const downloadTargets: Record<BridgeDownloadTarget, DownloadTargetConfig> = {
     defaultArch: 'amd64',
     platformPattern: /linux|x11/i,
     unavailableLabel: 'Linux binary list'
+  },
+  windows: {
+    manifestPlatform: 'windows',
+    kind: 'installer',
+    format: 'msi',
+    defaultArch: 'amd64',
+    platformPattern: /win/i,
+    unavailableLabel: 'Windows installer list'
   }
 }
 
@@ -203,7 +211,11 @@ function getArchLabel(arch: string): string {
 }
 
 function getDownloadLabel(download: BridgeDownload): string {
-  const platformLabel = props.target === 'linux' ? 'Linux' : 'macOS'
+  const platformLabel = props.target === 'linux'
+    ? 'Linux'
+    : props.target === 'windows'
+      ? 'Windows'
+      : 'macOS'
   return `Download for ${platformLabel} (${getArchLabel(download.arch)})`
 }
 

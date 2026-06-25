@@ -1,6 +1,8 @@
 # Install Bridge with Docker
 
-Docker is a flexible install path for the Bridge Alpha and works well for home servers, NAS devices, Linux hosts, and Docker Desktop environments.
+Docker is a flexible install path for the Bridge Alpha and works best on dedicated Linux hosts, NAS devices, home servers, and power-user environments where host networking is available.
+
+For most Windows and macOS desktop users, use the native installer instead of Docker Desktop. Docker Desktop port mapping is usually enough for the Bridge UI and outbound SharpTools Cloud connection, but many Bridge integrations rely on mDNS, UDP broadcast, Matter commissioning, or direct LAN reachability that Docker Desktop networking can make unreliable.
 
 Bridge stores runtime data, pairing information, integration configuration, secrets, device state, and logs in a persistent data directory. In Docker, that directory is `/data` inside the container.
 
@@ -88,9 +90,9 @@ Examples include:
 
 Host networking is the simplest way to let Bridge see the same local network as the host.
 
-## Docker Desktop and Port Mapping
+## Docker Desktop and Port-Mapped Networking
 
-Docker Desktop environments may not support Linux-style host networking in the same way. If host networking is unavailable, remove `network_mode: host` and publish the admin port instead:
+Docker Desktop is not the recommended path for most Bridge users. If you are a power user and still want to run Bridge with Docker Desktop, you may need to remove `network_mode: host` and publish the admin port instead:
 
 ```yaml
 services:
@@ -105,7 +107,7 @@ services:
 ```
 
 ::: warning Port-Mapped Networking Limitations
-Port-mapped mode is fine for the Bridge UI and the outbound SharpTools Cloud connection, but it may limit discovery and local device communication. Some integrations may require manual host/IP entry or may not work as well as they do with Linux host networking.
+Port-mapped mode is usually enough for the Bridge UI and outbound SharpTools Cloud connection, but it can break or limit mDNS discovery, UDP broadcast discovery, Matter commissioning, and direct local device communication. Some integrations may require manual host/IP entry, and some may not work reliably compared with Linux host networking or the native desktop installers.
 :::
 
 ## Persistent Data

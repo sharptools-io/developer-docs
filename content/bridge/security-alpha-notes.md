@@ -52,7 +52,7 @@ Only import Groovy source you trust and are willing to run on your local system.
 
 ## Local Webhooks
 
-The HTTP Webhook Device driver can expose local webhook URLs from Bridge.
+The HTTP Webhooks integration can expose local webhook URLs from Bridge.
 
 These URLs are intended for trusted local-network producers. Do not publish them publicly or expose Bridge directly to the internet.
 

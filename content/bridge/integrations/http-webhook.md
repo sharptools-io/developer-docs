@@ -1,6 +1,6 @@
-# HTTP Webhook Device
+# HTTP Webhooks
 
-The HTTP Webhook Device integration creates virtual devices backed by local webhooks and optional local HTTP requests.
+The HTTP Webhooks integration creates virtual devices backed by local webhooks and optional local HTTP requests.
 
 ## What You'll Need
 
@@ -16,7 +16,7 @@ Webhook endpoints are intended for trusted local-network use. Do not expose Brid
 
 1. Open the Bridge admin UI.
 2. Select **Add Device**.
-3. Choose **HTTP Webhook Device**.
+3. Choose **HTTP Webhooks**.
 4. Name the virtual device.
 5. Choose one or more features.
 6. On **Configure Commands**, optionally enter URLs that Bridge should call when command-capable features are used. See [Outbound Webhooks](#outbound-webhooks) below.

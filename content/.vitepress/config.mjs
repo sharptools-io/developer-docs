@@ -4,6 +4,11 @@ export default defineConfig({
   title: 'SharpTools Docs',
   description: 'SharpTools developer documentation site',
   cleanUrls: true,
+  vite: {
+    server: {
+      allowedHosts: ['macstudio']
+    }
+  },
   head: [
     ['link', { rel: 'icon', href: '/icons/favicon-32x32.png' }],
     ['link', { rel: 'manifest', href: '/icons/manifest.json' }],
@@ -68,8 +73,12 @@ export default defineConfig({
                 { text: 'Kasa / Tapo', link: '/bridge/integrations/kasa-tapo' },
                 { text: 'Lutron', link: '/bridge/integrations/lutron' },
                 { text: 'Fully Kiosk Browser', link: '/bridge/integrations/fully-kiosk' },
-                { text: 'HTTP Webhook Device', link: '/bridge/integrations/http-webhook' },
-                { text: 'iCal Calendar Events', link: '/bridge/integrations/ical-calendar-events' },
+                { text: 'Plex', link: '/bridge/integrations/plex' },
+                { text: 'Emby', link: '/bridge/integrations/emby' },
+                { text: 'Jellyfin', link: '/bridge/integrations/jellyfin' },
+                { text: 'Bridge Host Monitor', link: '/bridge/integrations/host-monitor' },
+                { text: 'HTTP Webhooks', link: '/bridge/integrations/http-webhook' },
+                { text: 'Calendar Events', link: '/bridge/integrations/ical-calendar-events' },
                 { text: 'Groovy Labs', link: '/bridge/integrations/groovy-labs' }
               ]
             },

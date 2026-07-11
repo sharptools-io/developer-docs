@@ -1,6 +1,6 @@
-# iCal Calendar Events
+# Calendar Events
 
-The iCal Calendar Events integration turns matching calendar events into virtual devices for SharpTools dashboards and rules.
+The Calendar Events integration turns matching iCalendar events into virtual devices for SharpTools dashboards and rules.
 
 ## What You'll Need
 
@@ -29,7 +29,7 @@ For example, you might add one feed named "Family Calendar", then create separat
 
 1. Open the Bridge admin UI.
 2. Select **Add Device**.
-3. Choose **iCal Calendar Events**.
+3. Choose **Calendar Events**.
 4. Add the private iCalendar / ICS feed URL and give the feed a name.
 5. Add a calendar matcher for the events you want to use in SharpTools.
 6. Give the matcher a name, optionally enter search text, and choose when it should become active before or after matching events.
